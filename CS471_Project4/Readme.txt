@@ -43,20 +43,19 @@ Bandwidth=<double>
 For compiling the code, this will depend on the Operating System you have.
 For any OS you must first have gcc version 8.2.0-3 installed. This can be looked up online.
 Once installed, in command line (preferably PowerShell for Windows), navigate to the build directory of the source 
-code provided. (e.g. cd C:\Users\TappleDon\OneDrive\CS471\Project2\build).
-The build directory should be in the same parent directory as the source directories, General,
-PThread, and Win32, as well as the directory Results. 
+code provided. (e.g. cd C:\Users\<username>\source\Optimization\build).
+The build directory should be in the same parent directory as the src and Results directory. 
 Then run the following commands:
 	
 	For Unix and Linux:
-gcc ../General/Utilities.c ../General/Utilities.h ../General/HostCalls.h ../PThread/UtilP.c ../PThread/main.c ../PThread/EquationHandlers.c ../General/EquationHandlers.h ../General/Init.c ../General/Init.h ../General/Equations.c ../General/Equations.h ../General/m19937ar-cok.c ../General/m19937ar-cok.h ../General/MersenneMatrix.c ../General/MersenneMatrix.h ../General/PSO.c ../General/PSO.h ../General/FA.c ../General/FA.h ../General/Harmonic.c ../General/Harmonic.h -o testing -lm -lpthread
+gcc ../src/Utilities.c ../src/Utilities.h ../src/HostCalls.h ../src/PThread/UtilP.c ../src/PThread/main.c ../src/PThread/EquationHandlers.c ../src/EquationHandlers.h ../src/Init.c ../src/Init.h ../src/Equations.c ../src/Equations.h ../src/m19937ar-cok.c ../src/m19937ar-cok.h ../src/MersenneMatrix.c ../src/MersenneMatrix.h ../src/PSO.c ../src/PSO.h ../src/FA.c ../src/FA.h ../src/Harmonic.c ../src/Harmonic.h -o testing -lm -lpthread
 	For Windows:
-gcc ../General/Utilities.c ../General/Utilities.h ../General/HostCalls.h ../Win32/Util32.c ../Win32/main32.c ../Win32/EquationHandlers32.c ../General/EquationHandlers.h ../General/Init.c ../General/Init.h ../General/Equations.c ../General/Equations.h ../General/m19937ar-cok.c ../General/m19937ar-cok.h ../General/MersenneMatrix.c ../General/MersenneMatrix.h ../General/PSO.c ../General/PSO.h ../General/FA.c ../General/FA.h ../General/Harmonic.c ../General/Harmonic.h -o testing -lm
+gcc ../src/Utilities.c ../src/Utilities.h ../src/HostCalls.h ../src/Win32/Util32.c ../src/Win32/main32.c ../src/Win32/EquationHandlers32.c ../src/EquationHandlers.h ../src/Init.c ../src/Init.h ../src/Equations.c ../src/Equations.h ../src/m19937ar-cok.c ../src/m19937ar-cok.h ../src/MersenneMatrix.c ../src/MersenneMatrix.h ../src/PSO.c ../src/PSO.h ../src/FA.c ../src/FA.h ../src/Harmonic.c ../src/Harmonic.h -o testing -lm
 
 This will create a file testing (or testing.exe in Windows) in the build folder.
 To run the program type ./testing (or ./testing.exe in Windows) while in the build folder.
 If one would like to specify a file path for an init file, please enter the file path as the
-first and only accepted argument to the program call (e.g. ./testing.exe C:\Users\TappleDon\OneDrive\CS471\Project2\build)
+first and only accepted argument to the program call (e.g. ./testing.exe C:\Users\<username>\source\Optimization\build)
 
 When the program runs it will print out the init file provided for review of the read in data,
 and then ask the user what type of test they would like to run. Either 'Particle' for Particle Swarm,
@@ -85,4 +84,4 @@ Recent Improvements
 
 Current known issues
 ----------------------------------------------------------------------------------------------------------
-Was unable to perform all of the tuning I wanted to perform as I kept running up on an issue which kept setting my timeline back. Because I was using a OneDrive location to store my files and results occasionally the OneDrive process would interrupt and take hold of the file causing my program to crash unable to access the file it needed to write to. I changed the location of the files to be written but I was already running out of time and needed to get tests run utilizing all of my CPU.
+Was unable to perform all of the tuning I wanted to perform as I kept running up on an issue which kept setting my timeline back. Because I was using a OneDrive location to store my files and results occasionally the OneDrive process would interrupt and take hold of the file causing my program to crash unable to access the file it needed to write to. I changed the location of the files to be written and haven't run into the issue since.
